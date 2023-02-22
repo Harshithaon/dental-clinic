@@ -22,8 +22,14 @@ Partial Class patientform
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
@@ -42,10 +48,9 @@ Partial Class patientform
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -70,6 +75,17 @@ Partial Class patientform
         Me.Label2.TabIndex = 7
         Me.Label2.Text = "PATIENT"
         '
+        'PictureBox2
+        '
+        Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.PictureBox2.Image = Global.dental_clinic.My.Resources.Resources.images__5_
+        Me.PictureBox2.Location = New System.Drawing.Point(613, 3)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(35, 28)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox2.TabIndex = 3
+        Me.PictureBox2.TabStop = False
+        '
         'Label1
         '
         Me.Label1.AutoSize = True
@@ -88,7 +104,7 @@ Partial Class patientform
         Me.Label3.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.DeepSkyBlue
-        Me.Label3.Location = New System.Drawing.Point(36, 124)
+        Me.Label3.Location = New System.Drawing.Point(36, 139)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(61, 18)
         Me.Label3.TabIndex = 9
@@ -103,17 +119,17 @@ Partial Class patientform
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(12, 145)
+        Me.TextBox2.Location = New System.Drawing.Point(12, 160)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(119, 20)
         Me.TextBox2.TabIndex = 11
         '
         'TextBox3
         '
-        Me.TextBox3.Location = New System.Drawing.Point(175, 81)
+        Me.TextBox3.Location = New System.Drawing.Point(147, 81)
         Me.TextBox3.Multiline = True
         Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(119, 85)
+        Me.TextBox3.Size = New System.Drawing.Size(144, 99)
         Me.TextBox3.TabIndex = 13
         '
         'Label4
@@ -122,11 +138,11 @@ Partial Class patientform
         Me.Label4.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.DeepSkyBlue
-        Me.Label4.Location = New System.Drawing.Point(199, 60)
+        Me.Label4.Location = New System.Drawing.Point(188, 60)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(61, 18)
+        Me.Label4.Size = New System.Drawing.Size(69, 18)
         Me.Label4.TabIndex = 12
-        Me.Label4.Text = "Phone "
+        Me.Label4.Text = "Address"
         '
         'Label5
         '
@@ -134,7 +150,7 @@ Partial Class patientform
         Me.Label5.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.DeepSkyBlue
-        Me.Label5.Location = New System.Drawing.Point(353, 60)
+        Me.Label5.Location = New System.Drawing.Point(363, 60)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(44, 18)
         Me.Label5.TabIndex = 14
@@ -142,9 +158,10 @@ Partial Class patientform
         '
         'DateTimePicker1
         '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(315, 81)
+        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DateTimePicker1.Location = New System.Drawing.Point(332, 81)
         Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(138, 20)
+        Me.DateTimePicker1.Size = New System.Drawing.Size(106, 20)
         Me.DateTimePicker1.TabIndex = 15
         '
         'Label6
@@ -153,7 +170,7 @@ Partial Class patientform
         Me.Label6.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.DeepSkyBlue
-        Me.Label6.Location = New System.Drawing.Point(344, 124)
+        Me.Label6.Location = New System.Drawing.Point(353, 138)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(63, 18)
         Me.Label6.TabIndex = 16
@@ -163,17 +180,17 @@ Partial Class patientform
         '
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Items.AddRange(New Object() {"MALE", "FEMALE", "OTHER"})
-        Me.ComboBox1.Location = New System.Drawing.Point(315, 144)
+        Me.ComboBox1.Location = New System.Drawing.Point(332, 159)
         Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(138, 21)
+        Me.ComboBox1.Size = New System.Drawing.Size(106, 21)
         Me.ComboBox1.TabIndex = 17
         '
         'TextBox4
         '
-        Me.TextBox4.Location = New System.Drawing.Point(487, 80)
+        Me.TextBox4.Location = New System.Drawing.Point(479, 80)
         Me.TextBox4.Multiline = True
         Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(119, 85)
+        Me.TextBox4.Size = New System.Drawing.Size(133, 100)
         Me.TextBox4.TabIndex = 19
         '
         'Label7
@@ -195,7 +212,7 @@ Partial Class patientform
         Me.Button1.Font = New System.Drawing.Font("Stencil", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.SystemColors.Control
         Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button1.Location = New System.Drawing.Point(224, 184)
+        Me.Button1.Location = New System.Drawing.Point(237, 206)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(142, 33)
         Me.Button1.TabIndex = 20
@@ -209,7 +226,7 @@ Partial Class patientform
         Me.Button2.Font = New System.Drawing.Font("Stencil", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.ForeColor = System.Drawing.SystemColors.Control
         Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button2.Location = New System.Drawing.Point(48, 184)
+        Me.Button2.Location = New System.Drawing.Point(61, 206)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(142, 33)
         Me.Button2.TabIndex = 21
@@ -223,7 +240,7 @@ Partial Class patientform
         Me.Button3.Font = New System.Drawing.Font("Stencil", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button3.ForeColor = System.Drawing.SystemColors.Control
         Me.Button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button3.Location = New System.Drawing.Point(400, 184)
+        Me.Button3.Location = New System.Drawing.Point(413, 206)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(142, 33)
         Me.Button3.TabIndex = 22
@@ -232,10 +249,42 @@ Partial Class patientform
         '
         'DataGridView1
         '
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DataGridView1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Menu
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.Desktop
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Info
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.Desktop
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle3
+        Me.DataGridView1.GridColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.DataGridView1.Location = New System.Drawing.Point(39, 286)
         Me.DataGridView1.Name = "DataGridView1"
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.Menu
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Menu
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.ControlLightLight
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.ButtonFace
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.DeepSkyBlue
+        Me.DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle5
         Me.DataGridView1.Size = New System.Drawing.Size(558, 150)
         Me.DataGridView1.TabIndex = 23
         '
@@ -259,17 +308,6 @@ Partial Class patientform
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(659, 18)
         Me.Panel2.TabIndex = 46
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.PictureBox2.Image = Global.dental_clinic.My.Resources.Resources.images__5_
-        Me.PictureBox2.Location = New System.Drawing.Point(613, 3)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(35, 28)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox2.TabIndex = 3
-        Me.PictureBox2.TabStop = False
         '
         'patientform
         '
@@ -297,11 +335,11 @@ Partial Class patientform
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "patientform"
-        Me.Text = "patient form"
+        Me.Text = " "
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
