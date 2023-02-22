@@ -23,7 +23,7 @@ Public Class treatment
         TextBox1.Text = ""
         TextBox2.Text = ""
         TextBox3.Text = ""
-
+        key = 0
 
 
     End Sub
@@ -37,19 +37,16 @@ Public Class treatment
             MessageBox.Show("missing information")
         Else
 
-            Try
-                Dim query = "insert into treatmenttbl  values('" + TextBox1.Text + "','" + TextBox2.Text + "','" + TextBox3.Text + "')"
-                Dim cmd As New SqlCommand(query, Con)
-                cmd.ExecuteNonQuery()
+
+            Dim query = "insert into treatmenttbl  values('" + TextBox1.Text + "','" + TextBox2.Text + "','" + TextBox3.Text + "')"
+            Dim cmd As New SqlCommand(query, Con)
+            cmd.ExecuteNonQuery()
 
                 MessageBox.Show("treatment saved successfully")
                 Con.Close()
                 populate()
                 reset()
 
-            Catch ex As Exception
-                MessageBox.Show(ex.Message)
-            End Try
 
 
         End If
