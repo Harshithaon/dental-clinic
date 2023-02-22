@@ -7,7 +7,7 @@ Public Class treatment
 
 
         Con.Close()
-        Dim query = "select * from treatment"
+        Dim query = "select * from treatmenttbl"
         Dim adapter As SqlDataAdapter
         adapter = New SqlDataAdapter(query, Con)
         Dim builder As New SqlCommandBuilder(adapter)
@@ -34,11 +34,11 @@ Public Class treatment
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         If TextBox1.Text = "" Or TextBox2.Text = "" Or TextBox3.Text = "" Then
-            MessageBox.Show("miissing information")
+            MessageBox.Show("missing information")
         Else
-            Try
 
-                Dim query = "insert into treatment  values('" + TextBox1.Text + "','" + TextBox2.Text + "','" + TextBox3.Text + "')"
+            Try
+                Dim query = "insert into treatmenttbl  values('" + TextBox1.Text + "','" + TextBox2.Text + "','" + TextBox3.Text + "')"
                 Dim cmd As New SqlCommand(query, Con)
                 cmd.ExecuteNonQuery()
 
@@ -56,21 +56,34 @@ Public Class treatment
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        Dim key As Integer = Nothing
 
         If key = 0 Then
-            MessageBox.Show("miissing information")
+            MessageBox.Show("missing information")
         Else
             Con.Open()
 
-            Dim query = "delete from patienttbl  where id=" & key & ""
+            Dim query = "delete from treatmenttbl  where id=" & key & ""
             Dim cmd As New SqlCommand(query, Con)
             cmd.ExecuteNonQuery()
 
-            MessageBox.Show("patient deleted successfully")
+            MessageBox.Show("treatment deleted successfully")
             Con.Close()
             populate()
             reset()
+        End If
+    End Sub
+    Dim key = 0
+
+    Private Sub DataGridView1_CellMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles DataGridView1.CellMouseClick
+        Dim row As DataGridViewRow = DataGridView1.Rows(e.RowIndex)
+        TextBox1.Text = row.Cells(1).Value.ToString
+        TextBox2.Text = row.Cells(2).Value.ToString
+        TextBox3.Text = row.Cells(3).Value.ToString
+
+        If TextBox1.Text = "" Then
+            key = 0
+        Else
+            key = Convert.ToInt32(row.Cells(0).Value.ToString)
         End If
     End Sub
 End Class
