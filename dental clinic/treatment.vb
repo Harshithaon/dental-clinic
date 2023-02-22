@@ -86,4 +86,9 @@ Public Class treatment
             key = Convert.ToInt32(row.Cells(0).Value.ToString)
         End If
     End Sub
+
+    Private Sub treatment_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        populate()
+
+    End Sub
 End Class

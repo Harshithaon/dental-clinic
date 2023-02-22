@@ -111,7 +111,7 @@ Public Class patientform
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         If TextBox1.Text = "" Or TextBox2.Text = "" Or TextBox3.Text = "" Or ComboBox1.SelectedIndex = -1 Or TextBox4.Text = "" Then
-            MessageBox.Show("miissing information")
+            MessageBox.Show("missing information")
         Else
             Con.Open()
 
