@@ -20,6 +20,15 @@ Public Class patientform
         Con.Close()
 
     End Sub
+    Private Sub reset()
+        TextBox1.Text = ""
+        TextBox2.Text = ""
+        TextBox3.Text = ""
+        TextBox4.Text = ""
+
+
+    End Sub
+
 
     Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
         Me.Hide()
@@ -44,7 +53,7 @@ Public Class patientform
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         If TextBox1.Text = "" Or TextBox2.Text = "" Or TextBox3.Text = "" Or ComboBox1.SelectedIndex = -1 Or TextBox4.Text = "" Then
-            MessageBox.show("miissing information")
+            MessageBox.Show("miissing information")
         Else
             Con.Open()
 
@@ -55,12 +64,71 @@ Public Class patientform
             MessageBox.Show("patient saved successfully")
             Con.Close()
             populate()
+            reset()
 
 
         End If
     End Sub
 
-    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs)
+
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        If key = 0 Then
+            MessageBox.Show("miissing information")
+        Else
+            Con.Open()
+
+            Dim query = "delete from patienttbl  where id=" & key & ""
+            Dim cmd As New SqlCommand(query, Con)
+            cmd.ExecuteNonQuery()
+
+            MessageBox.Show("patient deleted successfully")
+            Con.Close()
+            populate()
+            reset()
+        End If
+
+    End Sub
+    Dim key = 0
+
+    Private Sub DataGridView1_CellMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles DataGridView1.CellMouseClick
+        Dim row As DataGridViewRow = DataGridView1.Rows(e.RowIndex)
+        TextBox1.Text = row.Cells(1).Value.ToString
+        TextBox2.Text = row.Cells(2).Value.ToString
+        TextBox3.Text = row.Cells(3).Value.ToString
+        DateTimePicker1.Text = row.Cells(4).Value.ToString
+        ComboBox1.SelectedItem = row.Cells(5).Value.ToString
+        TextBox4.Text = row.Cells(6).Value.ToString
+        If TextBox1.Text = "" Then
+            key = 0
+        Else
+            key = Convert.ToInt32(row.Cells(0).Value.ToString)
+        End If
+
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        If TextBox1.Text = "" Or TextBox2.Text = "" Or TextBox3.Text = "" Or ComboBox1.SelectedIndex = -1 Or TextBox4.Text = "" Then
+            MessageBox.Show("miissing information")
+        Else
+            Con.Open()
+
+            Dim query = "update patienttbl  set name='" & TextBox1.Text & "', ph='" & TextBox2.Text & "', Add='" & TextBox3.Text & "',dob='" & DateTimePicker1.Value.Date & "',gen='" & ComboBox1.SelectedItem.ToString & "',allergies='" & TextBox4.Text & "' where id=" & key & ""
+            Dim cmd As New SqlCommand(query, Con)
+            cmd.ExecuteNonQuery()
+
+            MessageBox.Show("patient updated successfully")
+            Con.Close()
+            populate()
+            reset()
+
+
+        End If
+    End Sub
+
+    Private Sub DataGridView1_CellContentClick_1(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
 
     End Sub
 End Class

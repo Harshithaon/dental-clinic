@@ -24,7 +24,6 @@ Partial Class treatment
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Button3 = New System.Windows.Forms.Button()
@@ -38,9 +37,10 @@ Partial Class treatment
         Me.Label4 = New System.Windows.Forms.Label()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -64,17 +64,6 @@ Partial Class treatment
         Me.Label1.Size = New System.Drawing.Size(130, 25)
         Me.Label1.TabIndex = 7
         Me.Label1.Text = "TREATMENT"
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.PictureBox2.Image = Global.dental_clinic.My.Resources.Resources.images__5_
-        Me.PictureBox2.Location = New System.Drawing.Point(613, 3)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(35, 28)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox2.TabIndex = 3
-        Me.PictureBox2.TabStop = False
         '
         'Panel2
         '
@@ -101,7 +90,7 @@ Partial Class treatment
         Me.Button3.Font = New System.Drawing.Font("Stencil", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button3.ForeColor = System.Drawing.SystemColors.Control
         Me.Button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button3.Location = New System.Drawing.Point(403, 158)
+        Me.Button3.Location = New System.Drawing.Point(429, 179)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(142, 33)
         Me.Button3.TabIndex = 55
@@ -115,7 +104,7 @@ Partial Class treatment
         Me.Button2.Font = New System.Drawing.Font("Stencil", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.ForeColor = System.Drawing.SystemColors.Control
         Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button2.Location = New System.Drawing.Point(51, 158)
+        Me.Button2.Location = New System.Drawing.Point(77, 179)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(142, 33)
         Me.Button2.TabIndex = 54
@@ -129,7 +118,7 @@ Partial Class treatment
         Me.Button1.Font = New System.Drawing.Font("Stencil", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.SystemColors.Control
         Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button1.Location = New System.Drawing.Point(227, 158)
+        Me.Button1.Location = New System.Drawing.Point(253, 179)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(142, 33)
         Me.Button1.TabIndex = 53
@@ -142,11 +131,11 @@ Partial Class treatment
         Me.Label7.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.DeepSkyBlue
-        Me.Label7.Location = New System.Drawing.Point(487, 51)
+        Me.Label7.Location = New System.Drawing.Point(475, 58)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(84, 18)
+        Me.Label7.Size = New System.Drawing.Size(94, 18)
         Me.Label7.TabIndex = 52
-        Me.Label7.Text = "Treatment"
+        Me.Label7.Text = "Description"
         '
         'Label9
         '
@@ -154,7 +143,7 @@ Partial Class treatment
         Me.Label9.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.Color.DeepSkyBlue
-        Me.Label9.Location = New System.Drawing.Point(63, 51)
+        Me.Label9.Location = New System.Drawing.Point(61, 58)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(52, 18)
         Me.Label9.TabIndex = 47
@@ -165,7 +154,7 @@ Partial Class treatment
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Stencil", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label2.Location = New System.Drawing.Point(82, 200)
+        Me.Label2.Location = New System.Drawing.Point(108, 221)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(96, 25)
         Me.Label2.TabIndex = 46
@@ -185,7 +174,7 @@ Partial Class treatment
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(32, 72)
+        Me.TextBox1.Location = New System.Drawing.Point(30, 79)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(119, 20)
         Me.TextBox1.TabIndex = 63
@@ -196,7 +185,7 @@ Partial Class treatment
         Me.Label4.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.DeepSkyBlue
-        Me.Label4.Location = New System.Drawing.Point(293, 51)
+        Me.Label4.Location = New System.Drawing.Point(275, 58)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(44, 18)
         Me.Label4.TabIndex = 64
@@ -204,18 +193,29 @@ Partial Class treatment
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(259, 72)
+        Me.TextBox2.Location = New System.Drawing.Point(241, 79)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(119, 20)
         Me.TextBox2.TabIndex = 65
         '
         'TextBox3
         '
-        Me.TextBox3.Location = New System.Drawing.Point(472, 72)
+        Me.TextBox3.Location = New System.Drawing.Point(440, 79)
         Me.TextBox3.Multiline = True
         Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(119, 80)
+        Me.TextBox3.Size = New System.Drawing.Size(169, 84)
         Me.TextBox3.TabIndex = 66
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.PictureBox2.Image = Global.dental_clinic.My.Resources.Resources.images__5_
+        Me.PictureBox2.Location = New System.Drawing.Point(613, 3)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(35, 28)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox2.TabIndex = 3
+        Me.PictureBox2.TabStop = False
         '
         'treatment
         '
@@ -241,8 +241,8 @@ Partial Class treatment
         Me.Text = "treatment"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
