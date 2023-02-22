@@ -22,7 +22,6 @@ Partial Class appointments
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
@@ -45,17 +44,6 @@ Partial Class appointments
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Stencil", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label2.Location = New System.Drawing.Point(82, 216)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(96, 25)
-        Me.Label2.TabIndex = 9
-        Me.Label2.Text = "PATIENT"
         '
         'Panel1
         '
@@ -106,7 +94,7 @@ Partial Class appointments
         '
         Me.DataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(42, 276)
+        Me.DataGridView1.Location = New System.Drawing.Point(51, 276)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(558, 150)
         Me.DataGridView1.TabIndex = 40
@@ -118,7 +106,7 @@ Partial Class appointments
         Me.Button3.Font = New System.Drawing.Font("Stencil", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button3.ForeColor = System.Drawing.SystemColors.Control
         Me.Button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button3.Location = New System.Drawing.Point(403, 174)
+        Me.Button3.Location = New System.Drawing.Point(417, 174)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(142, 33)
         Me.Button3.TabIndex = 39
@@ -276,7 +264,6 @@ Partial Class appointments
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.Label2)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "appointments"
         Me.Text = "appointments"
@@ -288,8 +275,6 @@ Partial Class appointments
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents Label2 As Label
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label1 As Label
     Friend WithEvents PictureBox2 As PictureBox

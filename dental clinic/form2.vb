@@ -92,14 +92,12 @@
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Dim n As New patientform
-        Me.IsMdiContainer = True
-        n.MdiParent = Me
-        n.Show()
 
 
 
 
+
+        ContextMenuStrip1.Show(Button1, 0, Button1.Height)
 
 
     End Sub
@@ -122,5 +120,42 @@
 
 
 
+    End Sub
+
+    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
+        ContextMenuStrip2.Show(Button7, 0, Button7.Height)
+
+
+    End Sub
+
+    Private Sub PATIENTFEEDBACKToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PATIENTFEEDBACKToolStripMenuItem.Click
+        Dim n As New patientform
+        Me.IsMdiContainer = True
+        n.MdiParent = Me
+        n.Show()
+
+    End Sub
+
+    Private Sub PictureBox5_Click_1(sender As Object, e As EventArgs) Handles PictureBox5.Click
+
+    End Sub
+
+    Private Sub PATENTFEEDBACKToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PATENTFEEDBACKToolStripMenuItem.Click
+        Dim n As New Feedback
+        Me.IsMdiContainer = True
+        n.MdiParent = Me
+        n.Show()
+
+    End Sub
+
+    Private Sub STAFFToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles STAFFToolStripMenuItem.Click
+
+    End Sub
+
+    Private Sub STAFFToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles STAFFToolStripMenuItem1.Click
+        Dim n As New staff
+        Me.IsMdiContainer = True
+        n.MdiParent = Me
+        n.Show()
     End Sub
 End Class

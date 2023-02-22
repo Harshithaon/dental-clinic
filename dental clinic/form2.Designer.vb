@@ -42,6 +42,11 @@ Partial Class form2
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.Button7 = New System.Windows.Forms.Button()
+        Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.PATIENTFEEDBACKToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PATENTFEEDBACKToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PictureBox11 = New System.Windows.Forms.PictureBox()
         Me.PictureBox9 = New System.Windows.Forms.PictureBox()
         Me.PictureBox8 = New System.Windows.Forms.PictureBox()
         Me.PictureBox7 = New System.Windows.Forms.PictureBox()
@@ -52,9 +57,14 @@ Partial Class form2
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.ContextMenuStrip2 = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.STAFFToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.STAFFToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
+        Me.ContextMenuStrip1.SuspendLayout()
+        CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -65,6 +75,7 @@ Partial Class form2
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.ContextMenuStrip2.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
@@ -79,7 +90,7 @@ Partial Class form2
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(912, 48)
+        Me.Panel1.Size = New System.Drawing.Size(912, 42)
         Me.Panel1.TabIndex = 0
         '
         'Label5
@@ -181,6 +192,8 @@ Partial Class form2
         '
         'Panel3
         '
+        Me.Panel3.Controls.Add(Me.PictureBox11)
+        Me.Panel3.Controls.Add(Me.Button7)
         Me.Panel3.Controls.Add(Me.PictureBox9)
         Me.Panel3.Controls.Add(Me.PictureBox8)
         Me.Panel3.Controls.Add(Me.PictureBox7)
@@ -194,9 +207,9 @@ Partial Class form2
         Me.Panel3.Controls.Add(Me.Button2)
         Me.Panel3.Controls.Add(Me.Button1)
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Left
-        Me.Panel3.Location = New System.Drawing.Point(0, 48)
+        Me.Panel3.Location = New System.Drawing.Point(0, 42)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(193, 463)
+        Me.Panel3.Size = New System.Drawing.Size(193, 469)
         Me.Panel3.TabIndex = 0
         '
         'Button6
@@ -206,7 +219,7 @@ Partial Class form2
         Me.Button6.Font = New System.Drawing.Font("Stencil", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button6.ForeColor = System.Drawing.SystemColors.Control
         Me.Button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button6.Location = New System.Drawing.Point(53, 356)
+        Me.Button6.Location = New System.Drawing.Point(53, 424)
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(132, 33)
         Me.Button6.TabIndex = 7
@@ -218,7 +231,7 @@ Partial Class form2
         Me.Button4.BackColor = System.Drawing.Color.DeepSkyBlue
         Me.Button4.Font = New System.Drawing.Font("Stencil", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button4.ForeColor = System.Drawing.SystemColors.Control
-        Me.Button4.Location = New System.Drawing.Point(53, 219)
+        Me.Button4.Location = New System.Drawing.Point(53, 287)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(132, 33)
         Me.Button4.TabIndex = 5
@@ -233,7 +246,7 @@ Partial Class form2
         Me.Button3.ForeColor = System.Drawing.SystemColors.Control
         Me.Button3.ImageAlign = System.Drawing.ContentAlignment.TopLeft
         Me.Button3.ImageKey = "(none)"
-        Me.Button3.Location = New System.Drawing.Point(53, 149)
+        Me.Button3.Location = New System.Drawing.Point(53, 217)
         Me.Button3.Name = "Button3"
         Me.Button3.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.Button3.Size = New System.Drawing.Size(132, 33)
@@ -248,7 +261,7 @@ Partial Class form2
         Me.Button5.Font = New System.Drawing.Font("Stencil", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button5.ForeColor = System.Drawing.SystemColors.Control
         Me.Button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button5.Location = New System.Drawing.Point(53, 287)
+        Me.Button5.Location = New System.Drawing.Point(53, 355)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(132, 33)
         Me.Button5.TabIndex = 6
@@ -260,7 +273,7 @@ Partial Class form2
         Me.Button2.BackColor = System.Drawing.Color.DeepSkyBlue
         Me.Button2.Font = New System.Drawing.Font("Stencil", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.ForeColor = System.Drawing.SystemColors.Control
-        Me.Button2.Location = New System.Drawing.Point(53, 83)
+        Me.Button2.Location = New System.Drawing.Point(53, 151)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(132, 33)
         Me.Button2.TabIndex = 3
@@ -274,7 +287,7 @@ Partial Class form2
         Me.Button1.Font = New System.Drawing.Font("Stencil", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.SystemColors.Control
         Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button1.Location = New System.Drawing.Point(53, 15)
+        Me.Button1.Location = New System.Drawing.Point(53, 83)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(132, 33)
         Me.Button1.TabIndex = 3
@@ -285,11 +298,54 @@ Partial Class form2
         '
         Me.Timer1.Enabled = True
         '
+        'Button7
+        '
+        Me.Button7.BackColor = System.Drawing.Color.DeepSkyBlue
+        Me.Button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.Button7.Font = New System.Drawing.Font("Stencil", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button7.ForeColor = System.Drawing.SystemColors.Control
+        Me.Button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button7.Location = New System.Drawing.Point(53, 16)
+        Me.Button7.Name = "Button7"
+        Me.Button7.Size = New System.Drawing.Size(132, 33)
+        Me.Button7.TabIndex = 14
+        Me.Button7.Text = "STAFF"
+        Me.Button7.UseVisualStyleBackColor = False
+        '
+        'ContextMenuStrip1
+        '
+        Me.ContextMenuStrip1.BackColor = System.Drawing.Color.DeepSkyBlue
+        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PATIENTFEEDBACKToolStripMenuItem, Me.PATENTFEEDBACKToolStripMenuItem})
+        Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(178, 48)
+        '
+        'PATIENTFEEDBACKToolStripMenuItem
+        '
+        Me.PATIENTFEEDBACKToolStripMenuItem.Name = "PATIENTFEEDBACKToolStripMenuItem"
+        Me.PATIENTFEEDBACKToolStripMenuItem.Size = New System.Drawing.Size(177, 22)
+        Me.PATIENTFEEDBACKToolStripMenuItem.Text = "PATIENTS"
+        '
+        'PATENTFEEDBACKToolStripMenuItem
+        '
+        Me.PATENTFEEDBACKToolStripMenuItem.Name = "PATENTFEEDBACKToolStripMenuItem"
+        Me.PATENTFEEDBACKToolStripMenuItem.Size = New System.Drawing.Size(177, 22)
+        Me.PATENTFEEDBACKToolStripMenuItem.Text = "PATENT FEEDBACK"
+        '
+        'PictureBox11
+        '
+        Me.PictureBox11.BackgroundImage = CType(resources.GetObject("PictureBox11.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox11.Location = New System.Drawing.Point(2, 7)
+        Me.PictureBox11.Name = "PictureBox11"
+        Me.PictureBox11.Size = New System.Drawing.Size(46, 42)
+        Me.PictureBox11.TabIndex = 15
+        Me.PictureBox11.TabStop = False
+        '
         'PictureBox9
         '
         Me.PictureBox9.BackgroundImage = CType(resources.GetObject("PictureBox9.BackgroundImage"), System.Drawing.Image)
         Me.PictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox9.Location = New System.Drawing.Point(2, 347)
+        Me.PictureBox9.Location = New System.Drawing.Point(2, 415)
         Me.PictureBox9.Name = "PictureBox9"
         Me.PictureBox9.Size = New System.Drawing.Size(46, 42)
         Me.PictureBox9.TabIndex = 13
@@ -299,7 +355,7 @@ Partial Class form2
         '
         Me.PictureBox8.BackgroundImage = CType(resources.GetObject("PictureBox8.BackgroundImage"), System.Drawing.Image)
         Me.PictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox8.Location = New System.Drawing.Point(2, 278)
+        Me.PictureBox8.Location = New System.Drawing.Point(2, 346)
         Me.PictureBox8.Name = "PictureBox8"
         Me.PictureBox8.Size = New System.Drawing.Size(46, 42)
         Me.PictureBox8.TabIndex = 12
@@ -309,7 +365,7 @@ Partial Class form2
         '
         Me.PictureBox7.BackgroundImage = CType(resources.GetObject("PictureBox7.BackgroundImage"), System.Drawing.Image)
         Me.PictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox7.Location = New System.Drawing.Point(3, 210)
+        Me.PictureBox7.Location = New System.Drawing.Point(3, 278)
         Me.PictureBox7.Name = "PictureBox7"
         Me.PictureBox7.Size = New System.Drawing.Size(46, 42)
         Me.PictureBox7.TabIndex = 11
@@ -319,7 +375,7 @@ Partial Class form2
         '
         Me.PictureBox6.BackgroundImage = CType(resources.GetObject("PictureBox6.BackgroundImage"), System.Drawing.Image)
         Me.PictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox6.Location = New System.Drawing.Point(3, 140)
+        Me.PictureBox6.Location = New System.Drawing.Point(3, 208)
         Me.PictureBox6.Name = "PictureBox6"
         Me.PictureBox6.Size = New System.Drawing.Size(46, 42)
         Me.PictureBox6.TabIndex = 10
@@ -329,7 +385,7 @@ Partial Class form2
         '
         Me.PictureBox5.BackgroundImage = CType(resources.GetObject("PictureBox5.BackgroundImage"), System.Drawing.Image)
         Me.PictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox5.Location = New System.Drawing.Point(2, 74)
+        Me.PictureBox5.Location = New System.Drawing.Point(2, 142)
         Me.PictureBox5.Name = "PictureBox5"
         Me.PictureBox5.Size = New System.Drawing.Size(46, 42)
         Me.PictureBox5.TabIndex = 9
@@ -339,7 +395,7 @@ Partial Class form2
         '
         Me.PictureBox4.BackgroundImage = CType(resources.GetObject("PictureBox4.BackgroundImage"), System.Drawing.Image)
         Me.PictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox4.Location = New System.Drawing.Point(2, 6)
+        Me.PictureBox4.Location = New System.Drawing.Point(2, 74)
         Me.PictureBox4.Name = "PictureBox4"
         Me.PictureBox4.Size = New System.Drawing.Size(46, 42)
         Me.PictureBox4.TabIndex = 8
@@ -382,9 +438,31 @@ Partial Class form2
         Me.PictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PictureBox3.Location = New System.Drawing.Point(2, 3)
         Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(46, 38)
+        Me.PictureBox3.Size = New System.Drawing.Size(46, 36)
         Me.PictureBox3.TabIndex = 5
         Me.PictureBox3.TabStop = False
+        '
+        'ContextMenuStrip2
+        '
+        Me.ContextMenuStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.STAFFToolStripMenuItem1, Me.STAFFToolStripMenuItem})
+        Me.ContextMenuStrip2.Name = "ContextMenuStrip2"
+        Me.ContextMenuStrip2.Size = New System.Drawing.Size(154, 48)
+        '
+        'STAFFToolStripMenuItem
+        '
+        Me.STAFFToolStripMenuItem.BackColor = System.Drawing.Color.DeepSkyBlue
+        Me.STAFFToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.STAFFToolStripMenuItem.Name = "STAFFToolStripMenuItem"
+        Me.STAFFToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.STAFFToolStripMenuItem.Text = "STAFF REPORT"
+        '
+        'STAFFToolStripMenuItem1
+        '
+        Me.STAFFToolStripMenuItem1.BackColor = System.Drawing.Color.DeepSkyBlue
+        Me.STAFFToolStripMenuItem1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.STAFFToolStripMenuItem1.Name = "STAFFToolStripMenuItem1"
+        Me.STAFFToolStripMenuItem1.Size = New System.Drawing.Size(153, 22)
+        Me.STAFFToolStripMenuItem1.Text = "STAFF ENTRY"
         '
         'form2
         '
@@ -404,6 +482,8 @@ Partial Class form2
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         Me.Panel3.ResumeLayout(False)
+        Me.ContextMenuStrip1.ResumeLayout(False)
+        CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
@@ -414,6 +494,7 @@ Partial Class form2
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ContextMenuStrip2.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -446,4 +527,12 @@ Partial Class form2
     Friend WithEvents PictureBox4 As PictureBox
     Friend WithEvents Button6 As Button
     Friend WithEvents PictureBox10 As PictureBox
+    Friend WithEvents PictureBox11 As PictureBox
+    Friend WithEvents Button7 As Button
+    Friend WithEvents ContextMenuStrip1 As ContextMenuStrip
+    Friend WithEvents PATIENTFEEDBACKToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents PATENTFEEDBACKToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ContextMenuStrip2 As ContextMenuStrip
+    Friend WithEvents STAFFToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents STAFFToolStripMenuItem As ToolStripMenuItem
 End Class
