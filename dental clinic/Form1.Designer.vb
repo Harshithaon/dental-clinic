@@ -47,13 +47,12 @@ Partial Class Form1
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.SystemColors.Control
         Me.Label2.Location = New System.Drawing.Point(12, 296)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(69, 19)
+        Me.Label2.Size = New System.Drawing.Size(54, 13)
         Me.Label2.TabIndex = 3
-        Me.Label2.Text = "Dr.karun"
+        Me.Label2.Text = "DENTIST"
         '
         'Label3
         '
@@ -84,11 +83,11 @@ Partial Class Form1
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label5.Location = New System.Drawing.Point(39, 51)
+        Me.Label5.Location = New System.Drawing.Point(62, 51)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(286, 31)
+        Me.Label5.Size = New System.Drawing.Size(231, 25)
         Me.Label5.TabIndex = 7
         Me.Label5.Text = "Management System"
         '

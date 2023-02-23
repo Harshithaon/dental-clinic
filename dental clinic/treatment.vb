@@ -42,7 +42,7 @@ Handles DataGridView1.DataBindingComplete
         TextBox1.Text = ""
         TextBox2.Text = ""
         TextBox3.Text = ""
-
+        key = 0
 
 
     End Sub
@@ -56,20 +56,24 @@ Handles DataGridView1.DataBindingComplete
             MessageBox.Show("missing information")
         Else
 
+<<<<<<< HEAD
             Try
                 Con.Open()
                 Dim query = "insert into treatmenttbl  values('" + TextBox1.Text + "','" + TextBox2.Text + "','" + TextBox3.Text + "')"
                 Dim cmd As New SqlCommand(query, Con)
                 cmd.ExecuteNonQuery()
+=======
+
+            Dim query = "insert into treatmenttbl  values('" + TextBox1.Text + "','" + TextBox2.Text + "','" + TextBox3.Text + "')"
+            Dim cmd As New SqlCommand(query, Con)
+            cmd.ExecuteNonQuery()
+>>>>>>> 11cdabf69dd4b34366c822e591ac2bc08a1d1ff4
 
                 MessageBox.Show("treatment saved successfully")
                 Con.Close()
                 populate()
                 reset()
 
-            Catch ex As Exception
-                MessageBox.Show(ex.Message)
-            End Try
 
 
         End If
