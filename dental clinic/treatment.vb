@@ -14,11 +14,30 @@ Public Class treatment
         Dim ds As DataSet
         ds = New DataSet
         adapter.Fill(ds)
+
         DataGridView1.DataSource = ds.Tables(0)
+
 
         Con.Close()
 
     End Sub
+
+    Private Sub dataGridView1_DataBindingComplete(ByVal sender As Object,
+ByVal e As DataGridViewBindingCompleteEventArgs) _
+Handles DataGridView1.DataBindingComplete
+
+        ' Hide some of the columns.
+        With DataGridView1
+            .Columns("name").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+            .Columns("cost").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+            .Columns("treatment").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+
+        End With
+        DataGridView1.RowHeadersVisible = False
+        DataGridView1.AutoResizeColumns()
+
+    End Sub
+
     Private Sub reset()
         TextBox1.Text = ""
         TextBox2.Text = ""
@@ -38,6 +57,7 @@ Public Class treatment
         Else
 
             Try
+                Con.Open()
                 Dim query = "insert into treatmenttbl  values('" + TextBox1.Text + "','" + TextBox2.Text + "','" + TextBox3.Text + "')"
                 Dim cmd As New SqlCommand(query, Con)
                 cmd.ExecuteNonQuery()
@@ -89,6 +109,10 @@ Public Class treatment
 
     Private Sub treatment_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         populate()
+
+    End Sub
+
+    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
 
     End Sub
 End Class

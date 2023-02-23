@@ -115,7 +115,7 @@ Public Class patientform
         Else
             Con.Open()
 
-            Dim query = "update patienttbl  set name='" & TextBox1.Text & "', ph='" & TextBox2.Text & "', Add='" & TextBox3.Text & "',dob='" & DateTimePicker1.Value.Date & "',gen='" & ComboBox1.SelectedItem.ToString & "',allergies='" & TextBox4.Text & "' where id=" & key & ""
+            Dim query = "update patienttbl  set name='" & TextBox1.Text & "', ph='" & TextBox2.Text & "', address='" & TextBox3.Text & "',dob='" & DateTimePicker1.Value.Date & "',gen='" & ComboBox1.SelectedItem.ToString & "',allergies='" & TextBox4.Text & "' where id=" & key & ""
             Dim cmd As New SqlCommand(query, Con)
             cmd.ExecuteNonQuery()
 
