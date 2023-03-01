@@ -1,6 +1,7 @@
 ﻿Public Class loginform
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        Me.Close()
+        Application.Exit()
+
 
     End Sub
 

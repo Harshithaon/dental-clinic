@@ -87,7 +87,8 @@
 
     End Sub
 
-    Private Sub PictureBox10_Click(sender As Object, e As EventArgs) Handles PictureBox10.Click
+    Private Sub PictureBox10_Click(sender As Object, e As EventArgs)
+
 
 
 
@@ -165,11 +166,38 @@
     End Sub
 
     Private Sub STAFFToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles STAFFToolStripMenuItem.Click
-
+        Dim n As New Staffreport
+        closeChildForm()
+        Me.IsMdiContainer = True
+        n.MdiParent = Me
+        n.Dock = DockStyle.Fill
+        n.Show()
     End Sub
 
     Private Sub STAFFToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles STAFFToolStripMenuItem1.Click
         Dim n As New staff
+        closeChildForm()
+        Me.IsMdiContainer = True
+        n.MdiParent = Me
+        n.Dock = DockStyle.Fill
+        n.Show()
+    End Sub
+
+    Private Sub Label7_Click(sender As Object, e As EventArgs) Handles Label7.Click
+
+    End Sub
+
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+        Dim logout As DialogResult
+        logout = MessageBox.Show("Do you want to logout", "Info", MessageBoxButtons.YesNo, MessageBoxIcon.Information)
+        If logout = DialogResult.Yes Then
+            loginform.Show()
+            Me.Hide()
+        End If
+    End Sub
+
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+        Dim n As New dashboard
         closeChildForm()
         Me.IsMdiContainer = True
         n.MdiParent = Me

@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class staff
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,10 +20,15 @@ Partial Class staff
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
@@ -52,10 +57,9 @@ Partial Class staff
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -66,7 +70,7 @@ Partial Class staff
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(657, 39)
+        Me.Panel1.Size = New System.Drawing.Size(651, 39)
         Me.Panel1.TabIndex = 12
         '
         'Label1
@@ -80,18 +84,31 @@ Partial Class staff
         Me.Label1.TabIndex = 7
         Me.Label1.Text = "STAFF"
         '
+        'PictureBox2
+        '
+        Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.PictureBox2.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox2.Image = Global.dental_clinic.My.Resources.Resources.images__5_
+        Me.PictureBox2.Location = New System.Drawing.Point(613, 3)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(35, 28)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox2.TabIndex = 3
+        Me.PictureBox2.TabStop = False
+        '
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.DeepSkyBlue
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Panel2.Location = New System.Drawing.Point(0, 451)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(657, 18)
+        Me.Panel2.Size = New System.Drawing.Size(651, 18)
         Me.Panel2.TabIndex = 62
         '
         'DateTimePicker1
         '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(464, 99)
+        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DateTimePicker1.Location = New System.Drawing.Point(466, 108)
         Me.DateTimePicker1.Name = "DateTimePicker1"
         Me.DateTimePicker1.Size = New System.Drawing.Size(150, 20)
         Me.DateTimePicker1.TabIndex = 59
@@ -100,7 +117,7 @@ Partial Class staff
         '
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Items.AddRange(New Object() {"dentist", "assistant", "cleaner", "labarator", "helper"})
-        Me.ComboBox1.Location = New System.Drawing.Point(464, 46)
+        Me.ComboBox1.Location = New System.Drawing.Point(466, 55)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(149, 21)
         Me.ComboBox1.TabIndex = 58
@@ -111,7 +128,7 @@ Partial Class staff
         Me.Label12.BackColor = System.Drawing.SystemColors.Control
         Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label12.ForeColor = System.Drawing.Color.DeepSkyBlue
-        Me.Label12.Location = New System.Drawing.Point(391, 153)
+        Me.Label12.Location = New System.Drawing.Point(393, 162)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(67, 18)
         Me.Label12.TabIndex = 57
@@ -119,14 +136,14 @@ Partial Class staff
         '
         'TextBox10
         '
-        Me.TextBox10.Location = New System.Drawing.Point(464, 151)
+        Me.TextBox10.Location = New System.Drawing.Point(466, 160)
         Me.TextBox10.Name = "TextBox10"
         Me.TextBox10.Size = New System.Drawing.Size(150, 20)
         Me.TextBox10.TabIndex = 51
         '
         'TextBox7
         '
-        Me.TextBox7.Location = New System.Drawing.Point(464, 73)
+        Me.TextBox7.Location = New System.Drawing.Point(466, 82)
         Me.TextBox7.Name = "TextBox7"
         Me.TextBox7.Size = New System.Drawing.Size(150, 20)
         Me.TextBox7.TabIndex = 48
@@ -134,7 +151,7 @@ Partial Class staff
         'TextBox6
         '
         Me.TextBox6.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox6.Location = New System.Drawing.Point(142, 149)
+        Me.TextBox6.Location = New System.Drawing.Point(143, 158)
         Me.TextBox6.Name = "TextBox6"
         Me.TextBox6.Size = New System.Drawing.Size(149, 22)
         Me.TextBox6.TabIndex = 47
@@ -142,7 +159,7 @@ Partial Class staff
         'TextBox5
         '
         Me.TextBox5.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox5.Location = New System.Drawing.Point(142, 121)
+        Me.TextBox5.Location = New System.Drawing.Point(143, 106)
         Me.TextBox5.Name = "TextBox5"
         Me.TextBox5.Size = New System.Drawing.Size(149, 22)
         Me.TextBox5.TabIndex = 46
@@ -150,7 +167,7 @@ Partial Class staff
         'TextBox3
         '
         Me.TextBox3.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox3.Location = New System.Drawing.Point(142, 71)
+        Me.TextBox3.Location = New System.Drawing.Point(143, 132)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(149, 22)
         Me.TextBox3.TabIndex = 44
@@ -158,7 +175,7 @@ Partial Class staff
         'TextBox1
         '
         Me.TextBox1.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(142, 45)
+        Me.TextBox1.Location = New System.Drawing.Point(143, 50)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(149, 22)
         Me.TextBox1.TabIndex = 42
@@ -169,7 +186,7 @@ Partial Class staff
         Me.Label11.BackColor = System.Drawing.SystemColors.Control
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.ForeColor = System.Drawing.Color.DeepSkyBlue
-        Me.Label11.Location = New System.Drawing.Point(411, 127)
+        Me.Label11.Location = New System.Drawing.Point(413, 136)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(47, 18)
         Me.Label11.TabIndex = 41
@@ -181,7 +198,7 @@ Partial Class staff
         Me.Label9.BackColor = System.Drawing.SystemColors.Control
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.Color.DeepSkyBlue
-        Me.Label9.Location = New System.Drawing.Point(414, 101)
+        Me.Label9.Location = New System.Drawing.Point(416, 110)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(44, 18)
         Me.Label9.TabIndex = 39
@@ -193,7 +210,7 @@ Partial Class staff
         Me.Label8.BackColor = System.Drawing.SystemColors.Control
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.DeepSkyBlue
-        Me.Label8.Location = New System.Drawing.Point(324, 78)
+        Me.Label8.Location = New System.Drawing.Point(326, 87)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(134, 18)
         Me.Label8.TabIndex = 38
@@ -205,7 +222,7 @@ Partial Class staff
         Me.Label7.BackColor = System.Drawing.SystemColors.Control
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.DeepSkyBlue
-        Me.Label7.Location = New System.Drawing.Point(361, 46)
+        Me.Label7.Location = New System.Drawing.Point(363, 55)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(97, 18)
         Me.Label7.TabIndex = 37
@@ -217,7 +234,7 @@ Partial Class staff
         Me.Label6.BackColor = System.Drawing.SystemColors.Control
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.DeepSkyBlue
-        Me.Label6.Location = New System.Drawing.Point(60, 151)
+        Me.Label6.Location = New System.Drawing.Point(63, 156)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(74, 18)
         Me.Label6.TabIndex = 36
@@ -229,7 +246,7 @@ Partial Class staff
         Me.Label5.BackColor = System.Drawing.SystemColors.Control
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.DeepSkyBlue
-        Me.Label5.Location = New System.Drawing.Point(92, 125)
+        Me.Label5.Location = New System.Drawing.Point(95, 130)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(42, 18)
         Me.Label5.TabIndex = 35
@@ -241,7 +258,7 @@ Partial Class staff
         Me.Label3.BackColor = System.Drawing.SystemColors.Control
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.DeepSkyBlue
-        Me.Label3.Location = New System.Drawing.Point(5, 73)
+        Me.Label3.Location = New System.Drawing.Point(8, 78)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(129, 18)
         Me.Label3.TabIndex = 33
@@ -253,7 +270,7 @@ Partial Class staff
         Me.Label13.BackColor = System.Drawing.SystemColors.Control
         Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label13.ForeColor = System.Drawing.Color.DeepSkyBlue
-        Me.Label13.Location = New System.Drawing.Point(5, 46)
+        Me.Label13.Location = New System.Drawing.Point(8, 51)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(131, 18)
         Me.Label13.TabIndex = 31
@@ -265,7 +282,7 @@ Partial Class staff
         Me.Label2.BackColor = System.Drawing.SystemColors.Control
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.DeepSkyBlue
-        Me.Label2.Location = New System.Drawing.Point(67, 117)
+        Me.Label2.Location = New System.Drawing.Point(67, 112)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(0, 18)
         Me.Label2.TabIndex = 63
@@ -273,7 +290,7 @@ Partial Class staff
         'TextBox2
         '
         Me.TextBox2.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(142, 97)
+        Me.TextBox2.Location = New System.Drawing.Point(143, 78)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(149, 22)
         Me.TextBox2.TabIndex = 64
@@ -284,7 +301,7 @@ Partial Class staff
         Me.Label4.BackColor = System.Drawing.SystemColors.Control
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.DeepSkyBlue
-        Me.Label4.Location = New System.Drawing.Point(78, 99)
+        Me.Label4.Location = New System.Drawing.Point(81, 104)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(56, 18)
         Me.Label4.TabIndex = 65
@@ -293,8 +310,8 @@ Partial Class staff
         'ComboBox2
         '
         Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Items.AddRange(New Object() {"dentist", "assistant", "cleaner", "labarator", "helper"})
-        Me.ComboBox2.Location = New System.Drawing.Point(464, 125)
+        Me.ComboBox2.Items.AddRange(New Object() {"Andhra Pradesh", "Arunachal Pradesh", "Assam", "Bihar", "Chhattisgarh", "Goa", "Gujarat", "Haryana", "Himachal Pradesh", "Jharkhand", "Karnataka", "Keral", "Madhya Pradesh", "Maharashtra", "Manipur", "Meghalaya", "Mizoram", "Nagaland", "Odisha", "Punjab", "Rajasthan", "Sikkim", "Tamil Nadu", "Telangana", "Tripura", "Uttarakhand", "Uttar Pradesh", "West Bengal"})
+        Me.ComboBox2.Location = New System.Drawing.Point(466, 134)
         Me.ComboBox2.Name = "ComboBox2"
         Me.ComboBox2.Size = New System.Drawing.Size(149, 21)
         Me.ComboBox2.TabIndex = 66
@@ -303,10 +320,11 @@ Partial Class staff
         '
         Me.Button3.BackColor = System.Drawing.Color.DeepSkyBlue
         Me.Button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.Button3.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button3.Font = New System.Drawing.Font("Stencil", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button3.ForeColor = System.Drawing.SystemColors.Control
         Me.Button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button3.Location = New System.Drawing.Point(423, 188)
+        Me.Button3.Location = New System.Drawing.Point(418, 198)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(142, 33)
         Me.Button3.TabIndex = 70
@@ -317,10 +335,11 @@ Partial Class staff
         '
         Me.Button2.BackColor = System.Drawing.Color.DeepSkyBlue
         Me.Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.Button2.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button2.Font = New System.Drawing.Font("Stencil", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.ForeColor = System.Drawing.SystemColors.Control
         Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button2.Location = New System.Drawing.Point(71, 188)
+        Me.Button2.Location = New System.Drawing.Point(66, 198)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(142, 33)
         Me.Button2.TabIndex = 69
@@ -331,10 +350,11 @@ Partial Class staff
         '
         Me.Button1.BackColor = System.Drawing.Color.DeepSkyBlue
         Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button1.Font = New System.Drawing.Font("Stencil", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.SystemColors.Control
         Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button1.Location = New System.Drawing.Point(247, 188)
+        Me.Button1.Location = New System.Drawing.Point(242, 198)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(142, 33)
         Me.Button1.TabIndex = 68
@@ -358,7 +378,7 @@ Partial Class staff
         Me.Label14.BackColor = System.Drawing.SystemColors.Control
         Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label14.ForeColor = System.Drawing.Color.DeepSkyBlue
-        Me.Label14.Location = New System.Drawing.Point(244, 237)
+        Me.Label14.Location = New System.Drawing.Point(275, 247)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(109, 18)
         Me.Label14.TabIndex = 71
@@ -366,29 +386,55 @@ Partial Class staff
         '
         'DataGridView1
         '
-        Me.DataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.DataGridView1.AllowUserToResizeColumns = False
+        Me.DataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonFace
+        Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.DataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.DeepSkyBlue
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.RoyalBlue
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.Desktop
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(17, 258)
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.SlateBlue
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Maiandra GD", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Indigo
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle2
+        Me.DataGridView1.EnableHeadersVisualStyles = False
+        Me.DataGridView1.GridColor = System.Drawing.SystemColors.ButtonFace
+        Me.DataGridView1.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.DataGridView1.Location = New System.Drawing.Point(12, 268)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(576, 187)
+        Me.DataGridView1.ReadOnly = True
+        Me.DataGridView1.RightToLeft = System.Windows.Forms.RightToLeft.No
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.MenuHighlight
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.HotTrack
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.MenuHighlight
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.HotTrack
+        Me.DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle4
+        Me.DataGridView1.RowTemplate.ReadOnly = True
+        Me.DataGridView1.ShowEditingIcon = False
+        Me.DataGridView1.Size = New System.Drawing.Size(621, 177)
         Me.DataGridView1.TabIndex = 72
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.PictureBox2.Image = Global.dental_clinic.My.Resources.Resources.images__5_
-        Me.PictureBox2.Location = New System.Drawing.Point(613, 3)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(35, 28)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox2.TabIndex = 3
-        Me.PictureBox2.TabStop = False
         '
         'staff
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(657, 469)
+        Me.ClientSize = New System.Drawing.Size(651, 469)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Label14)
         Me.Controls.Add(Me.Button3)
@@ -423,8 +469,8 @@ Partial Class staff
         Me.Text = "employeeform"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

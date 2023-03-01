@@ -50,9 +50,9 @@ Partial Class Form1
         Me.Label2.ForeColor = System.Drawing.SystemColors.Control
         Me.Label2.Location = New System.Drawing.Point(12, 296)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(54, 13)
+        Me.Label2.Size = New System.Drawing.Size(42, 13)
         Me.Label2.TabIndex = 3
-        Me.Label2.Text = "DENTIST"
+        Me.Label2.Text = "ADMIN"
         '
         'Label3
         '

@@ -1,7 +1,8 @@
 ﻿Imports System.Data.SqlClient
+Imports System.IO
 
 Public Class treatment
-    Dim Con As New SqlConnection("Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=treatments;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False")
+    Dim con As New SqlConnection("Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Dental-clinic;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False")
     Dim cmd As SqlCommand
     Private Sub populate()
 
@@ -21,30 +22,10 @@ Public Class treatment
         Con.Close()
 
     End Sub
-
-    Private Sub dataGridView1_DataBindingComplete(ByVal sender As Object,
-ByVal e As DataGridViewBindingCompleteEventArgs) _
-Handles DataGridView1.DataBindingComplete
-
-        ' Hide some of the columns.
-        With DataGridView1
-            .Columns("name").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
-            .Columns("cost").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
-            .Columns("treatment").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
-
-        End With
-        DataGridView1.RowHeadersVisible = False
-        DataGridView1.AutoResizeColumns()
-
-    End Sub
-
     Private Sub reset()
         TextBox1.Text = ""
         TextBox2.Text = ""
         TextBox3.Text = ""
-        key = 0
-
-
     End Sub
     Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
         Me.Hide()
@@ -56,23 +37,15 @@ Handles DataGridView1.DataBindingComplete
             MessageBox.Show("missing information")
         Else
 
-<<<<<<< HEAD
-            Try
-                Con.Open()
-                Dim query = "insert into treatmenttbl  values('" + TextBox1.Text + "','" + TextBox2.Text + "','" + TextBox3.Text + "')"
-                Dim cmd As New SqlCommand(query, Con)
-                cmd.ExecuteNonQuery()
-=======
-
+            Con.Open()
             Dim query = "insert into treatmenttbl  values('" + TextBox1.Text + "','" + TextBox2.Text + "','" + TextBox3.Text + "')"
             Dim cmd As New SqlCommand(query, Con)
             cmd.ExecuteNonQuery()
->>>>>>> 11cdabf69dd4b34366c822e591ac2bc08a1d1ff4
 
-                MessageBox.Show("treatment saved successfully")
-                Con.Close()
-                populate()
-                reset()
+            MessageBox.Show("treatment saved successfully")
+            Con.Close()
+            populate()
+            reset()
 
 
 
@@ -98,7 +71,7 @@ Handles DataGridView1.DataBindingComplete
     End Sub
     Dim key = 0
 
-    Private Sub DataGridView1_CellMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles DataGridView1.CellMouseClick
+    Private Sub DataGridView1_CellMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs)
         Dim row As DataGridViewRow = DataGridView1.Rows(e.RowIndex)
         TextBox1.Text = row.Cells(1).Value.ToString
         TextBox2.Text = row.Cells(2).Value.ToString
@@ -116,7 +89,54 @@ Handles DataGridView1.DataBindingComplete
 
     End Sub
 
-    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        If TextBox1.Text = "" Or TextBox2.Text = "" Or TextBox3.Text = "" Then
+            MessageBox.Show("missing information")
+        Else
+            Con.Open()
 
+            Dim query = "update treatmenttbl  set Name='" & TextBox1.Text & "', Cost='" & TextBox2.Text & "', Description='" & TextBox3.Text & "' where id=" & key & ""
+            Dim cmd As New SqlCommand(query, Con)
+            cmd.ExecuteNonQuery()
+
+            MessageBox.Show("treatment updated successfully")
+            Con.Close()
+            populate()
+            reset()
+
+
+        End If
+    End Sub
+
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        Dim writer As New StreamWriter("D:\table\Treatment.xls")
+        For i As Integer = 0 To DataGridView1.Rows.Count - 2 Step +1
+            For j As Integer = 0 To DataGridView1.Columns.Count - 1 Step +1
+                If j = DataGridView1.Columns.Count - 1 Then
+                    writer.Write(vbTab & DataGridView1.Rows(i).Cells(j).Value.ToString())
+                Else
+                    writer.Write(vbTab & DataGridView1.Rows(i).Cells(j).Value.ToString & vbTab)
+
+                End If
+            Next j
+            writer.WriteLine()
+
+        Next i
+        writer.Close()
+        MessageBox.Show("Table Saved")
+    End Sub
+
+    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+        Dim row As DataGridViewRow = DataGridView1.Rows(e.RowIndex)
+        TextBox1.Text = row.Cells(1).Value.ToString
+        TextBox2.Text = row.Cells(2).Value.ToString
+        TextBox3.Text = row.Cells(3).Value.ToString
+
+        If TextBox1.Text = "" Then
+            key = 0
+        Else
+            key = Convert.ToInt32(row.Cells(0).Value.ToString)
+        End If
     End Sub
 End Class
+

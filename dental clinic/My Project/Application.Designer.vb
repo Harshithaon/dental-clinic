@@ -29,14 +29,10 @@ Namespace My
             Me.SaveMySettingsOnExit = true
             Me.ShutDownStyle = Global.Microsoft.VisualBasic.ApplicationServices.ShutdownMode.AfterMainFormCloses
         End Sub
-        
-        <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
+
+        <Global.System.Diagnostics.DebuggerStepThroughAttribute()>
         Protected Overrides Sub OnCreateMainForm()
-<<<<<<< HEAD
             Me.MainForm = Global.dental_clinic.form2
-=======
-            Me.MainForm = Global.dental_clinic.prescription
->>>>>>> 11cdabf69dd4b34366c822e591ac2bc08a1d1ff4
         End Sub
     End Class
 End Namespace

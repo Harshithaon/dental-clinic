@@ -110,7 +110,8 @@ Partial Class loginform
         '
         'Button1
         '
-        Me.Button1.BackColor = System.Drawing.Color.Lime
+        Me.Button1.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button1.Font = New System.Drawing.Font("Stencil", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.Location = New System.Drawing.Point(254, 312)
         Me.Button1.Name = "Button1"
@@ -121,7 +122,8 @@ Partial Class loginform
         '
         'Button2
         '
-        Me.Button2.BackColor = System.Drawing.Color.Yellow
+        Me.Button2.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.Button2.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button2.Font = New System.Drawing.Font("Stencil", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.Location = New System.Drawing.Point(349, 312)
         Me.Button2.Name = "Button2"
@@ -132,7 +134,8 @@ Partial Class loginform
         '
         'Button3
         '
-        Me.Button3.BackColor = System.Drawing.Color.Red
+        Me.Button3.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.Button3.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button3.Font = New System.Drawing.Font("Stencil", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button3.Location = New System.Drawing.Point(448, 312)
         Me.Button3.Name = "Button3"
